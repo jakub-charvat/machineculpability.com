@@ -1,0 +1,20 @@
+# Hugo build output (GitHub Actions will build this)
+public/
+
+# Hugo cache
+resources/_gen/
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (for scripts)
+scripts/node_modules/
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

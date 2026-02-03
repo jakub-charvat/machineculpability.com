@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Language.Params.description }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="ai-contact" content="mailto:{{ .Site.Params.aiContact }}">
+  {{ hugo.Generator }}
+  {{ $css := resources.Get "css/main.css" }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Home.RelPermalink }}index.xml">
+  {{- range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{- end }}
+  <link rel="alternate" hreflang="{{ .Site.Language.Lang }}" href="{{ .Permalink }}">
+  {{- block "head" . }}{{ end }}
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <a href="{{ .Site.Home.RelPermalink }}" class="site-logo">
+        <span class="machine">Machine</span><span class="culpability">Culpability</span>
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        <span class="lang-switch">
+          {{- if eq .Site.Language.Lang "en" -}}
+          <span class="lang-active">EN</span>
+          {{- if .Translations -}}
+            {{- range .Translations -}}
+              {{- if eq .Language.Lang "cs" -}}
+          / <a href="{{ .Permalink }}">CS</a>
+              {{- end -}}
+            {{- end -}}
+          {{- else -}}
+          / <a href="{{ .Site.BaseURL }}cs/">CS</a>
+          {{- end -}}
+          {{- else -}}
+          <a href="{{ with .Translations }}{{ range . }}{{ if eq .Language.Lang "en" }}{{ .Permalink }}{{ end }}{{ end }}{{ else }}{{ .Site.BaseURL }}en/{{ end }}">EN</a> / <span class="lang-active">CS</span>
+          {{- end -}}
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>
+      &copy; {{ now.Year }} {{ .Site.Params.author }} &middot;
+      <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> &middot;
+      <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}</a>
+    </p>
+  </footer>
+</body>
+</html>

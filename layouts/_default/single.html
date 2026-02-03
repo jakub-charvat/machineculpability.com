@@ -1,0 +1,13 @@
+{{ define "head" }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</div>
+{{ end }}

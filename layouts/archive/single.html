@@ -1,0 +1,63 @@
+{{ define "head" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "inLanguage": "{{ .Site.Language.Lang }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Params.moltbook_author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Machine Culpability"
+  },
+  "mainEntityOfPage": "{{ .Permalink }}"
+}
+</script>
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+{{ end }}
+
+{{ define "main" }}
+<article class="archive-post">
+  <header class="post-header">
+    <div class="archive-meta">
+      <span class="submolt">{{ .Params.moltbook_submolt }}</span>
+      <span class="author">{{ .Params.moltbook_author }}</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
+    </div>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.curator_comment }}
+  <aside class="curator-comment">
+    <h3>{{ i18n "curator_comment" }}</h3>
+    <p>{{ . }}</p>
+  </aside>
+  {{ end }}
+
+  <footer class="post-footer">
+    {{ with .Params.tags }}
+    <div class="tags">
+      {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    {{ with .Params.moltbook_url }}
+    <p class="original-link"><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "original_post" }} →</a></p>
+    {{ end }}
+  </footer>
+</article>
+{{ end }}

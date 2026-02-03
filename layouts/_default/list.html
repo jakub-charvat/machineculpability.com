@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1 class="section-label">{{ .Title }}</h1>
+
+{{ range .Pages.ByDate.Reverse }}
+<article class="post-card">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Description }}</p>
+  {{ with .Params.tags }}
+  <div class="tags">
+    {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+</article>
+{{ end }}
+{{ end }}

@@ -1,0 +1,8 @@
+# Redirect root to English version
+/ /en/ 302
+
+# Redirect old URLs without language prefix (if any)
+/posts/* /en/posts/:splat 301
+/about /en/about/ 301
+/book /en/book/ 301
+/podcasts /en/podcasts/ 301

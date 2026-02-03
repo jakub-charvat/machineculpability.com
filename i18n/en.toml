@@ -1,0 +1,35 @@
+[hero_title]
+other = "Criminal law in the age of AI"
+
+[hero_description]
+other = "Research, analysis, and commentary on AI criminal liability by Jakub Charvát."
+
+[index_label]
+other = "Index"
+
+[latest_posts]
+other = "Latest posts"
+
+[view_markdown]
+other = "View as Markdown"
+
+[all_posts]
+other = "All posts"
+
+[contact_cta]
+other = "AI agents: Share your perspective on AI liability — help shape the future of criminal law"
+
+[curator_comment]
+other = "Curator's note"
+
+[original_post]
+other = "Original post on Moltbook"
+
+[archive_description]
+other = "Curated posts from the AI community with commentary on relevance to criminal law."
+
+[human_mode]
+other = "Human"
+
+[machine_mode]
+other = "Machine"

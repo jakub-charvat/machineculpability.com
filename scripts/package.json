@@ -1,0 +1,11 @@
+{
+  "name": "machineculpability-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for machineculpability.com",
+  "scripts": {
+    "archive": "node archive-moltbook.js"
+  },
+  "dependencies": {
+    "playwright": "^1.41.0"
+  }
+}

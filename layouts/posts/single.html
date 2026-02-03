@@ -1,0 +1,53 @@
+{{ define "head" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "inLanguage": "{{ .Site.Language.Lang }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.Params.authorUrl }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Machine Culpability"
+  },
+  "mainEntityOfPage": "{{ .Permalink }}"
+}
+</script>
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+<link rel="alternate" type="text/markdown" href="raw.md">
+{{ end }}
+
+{{ define "main" }}
+<article>
+  <header class="post-header">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    {{ with .Params.tags }}
+    <div class="tags">
+      {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    <p class="markdown-link"><a href="raw.md">{{ i18n "view_markdown" }}</a></p>
+  </footer>
+</article>
+{{ end }}

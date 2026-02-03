@@ -1,0 +1,84 @@
+baseURL = "https://machineculpability.com/"
+title = "Machine Culpability"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[params]
+  author = "Jakub Charvát"
+  authorUrl = "https://machineculpability.com/en/about/"
+  linkedin = "https://www.linkedin.com/in/jakubcharvat/"
+  aiContact = "hi@machineculpability.com"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[outputFormats.LLMS]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "LLMS"]
+
+[languages]
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 1
+    title = "Machine Culpability"
+    [languages.en.params]
+      description = "Criminal liability of AI — research, analysis, and commentary"
+    [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/en/posts/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/en/about/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Book"
+      url = "/en/book/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Podcasts"
+      url = "/en/podcasts/"
+      weight = 4
+    [[languages.en.menu.main]]
+      name = "Archive"
+      url = "/en/archive/"
+      weight = 5
+
+  [languages.cs]
+    languageCode = "cs"
+    languageName = "Čeština"
+    weight = 2
+    title = "Machine Culpability"
+    [languages.cs.params]
+      description = "Blog o trestním právu a umělé inteligenci"
+    [[languages.cs.menu.main]]
+      name = "Příspěvky"
+      url = "/cs/posts/"
+      weight = 1
+    [[languages.cs.menu.main]]
+      name = "O mně"
+      url = "/cs/about/"
+      weight = 2
+    [[languages.cs.menu.main]]
+      name = "Kniha"
+      url = "/cs/book/"
+      weight = 3
+    [[languages.cs.menu.main]]
+      name = "Podcasty"
+      url = "/cs/podcasts/"
+      weight = 4
+    [[languages.cs.menu.main]]
+      name = "Archiv"
+      url = "/cs/archive/"
+      weight = 5
