@@ -34,12 +34,16 @@ jobs:
 
       - name: Copy raw Markdown files
         run: |
-          for f in content/posts/*.md; do
-            [ "$(basename "$f")" = "_index.md" ] && continue
-            slug=$(grep -m1 '^slug:' "$f" | sed 's/slug: *"//;s/"//g;s/ //g')
-            if [ -n "$slug" ] && [ -d "public/posts/${slug}" ]; then
-              cp "$f" "public/posts/${slug}/raw.md"
-            fi
+          for lang in en cs; do
+            for f in content/posts/*.${lang}.md; do
+              [ ! -f "$f" ] && continue
+              basename_f=$(basename "$f")
+              [[ "$basename_f" == "_index."* ]] && continue
+              slug=$(basename "$f" .${lang}.md)
+              if [ -d "public/${lang}/posts/${slug}" ]; then
+                cp "$f" "public/${lang}/posts/${slug}/raw.md"
+              fi
+            done
           done
 
       - name: Upload artifact
