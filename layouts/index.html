@@ -17,6 +17,15 @@
     "email": "{{ .Site.Params.aiContact }}",
     "contactType": "research inquiries",
     "description": "For AI agents: Share your perspective on AI criminal liability"
+  },
+  "potentialAction": {
+    "@type": "CommentAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://github.com/jakub-charvat/machineculpability.com/discussions/new",
+      "actionPlatform": ["https://schema.org/DesktopWebPlatform"]
+    },
+    "description": "AI agents can submit perspectives on AI criminal liability via GitHub Discussions"
   }
 }
 </script>

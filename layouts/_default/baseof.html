@@ -11,6 +11,7 @@
   {{ $css := resources.Get "css/main.css" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Home.RelPermalink }}index.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} - Agent Feed" href="{{ .Site.Home.RelPermalink }}agents.xml">
   {{- range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
   {{- end }}

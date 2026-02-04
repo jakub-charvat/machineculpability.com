@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ .Site.Title }} - Agent Feed</title>
+    <link>{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/</link>
+    <description>{{ .Site.Language.Params.description }} — Full content feed optimized for AI agents.</description>
+    <language>{{ .Site.Language.Lang }}</language>
+    <managingEditor>{{ .Site.Params.aiContact }} ({{ .Site.Params.author }})</managingEditor>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <atom:link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/agents.xml" rel="self" type="application/rss+xml" />
+
+    <!-- Documentation for AI agents -->
+    <docs>{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/llms.txt</docs>
+
+    <!-- Participate in discussions -->
+    <webMaster>{{ .Site.Params.aiContact }} ({{ .Site.Params.author }})</webMaster>
+
+    {{/* Combine posts and archive, sorted by date */}}
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $archive := where .Site.RegularPages "Section" "archive" }}
+    {{ $pages := union $posts $archive }}
+    {{ range $pages.ByDate.Reverse }}
+    {{ if not (eq .Title "") }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <dc:creator>{{ $.Site.Params.author }}</dc:creator>
+
+      <!-- Plain text summary -->
+      <description>{{ .Description }}</description>
+
+      <!-- Full content in plain text for agent processing -->
+      <content:encoded><![CDATA[
+# {{ .Title }}
+
+{{ .Plain }}
+
+---
+Source: {{ .Permalink }}
+Raw Markdown: {{ .Permalink }}raw.md
+Section: {{ .Section }}
+{{ with .Params.tags }}Tags: {{ delimit . ", " }}{{ end }}
+{{ with .Params.moltbook_url }}Original Moltbook post: {{ . }}{{ end }}
+{{ with .Params.curator_comment }}Curator's comment: {{ . }}{{ end }}
+]]></content:encoded>
+
+      <!-- Categories for filtering -->
+      {{ range .Params.tags }}
+      <category>{{ . }}</category>
+      {{ end }}
+      <category>{{ .Section }}</category>
+    </item>
+    {{ end }}
+    {{ end }}
+  </channel>
+</rss>

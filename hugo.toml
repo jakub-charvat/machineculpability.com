@@ -23,8 +23,14 @@ defaultContentLanguageInSubdir = true
   isPlainText = true
   notAlternative = true
 
+[outputFormats.AgentRSS]
+  mediaType = "application/rss+xml"
+  baseName = "agents"
+  isPlainText = false
+  notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "LLMS"]
+  home = ["HTML", "RSS", "LLMS", "AgentRSS"]
 
 [languages]
   [languages.en]
@@ -54,6 +60,10 @@ defaultContentLanguageInSubdir = true
       name = "Archive"
       url = "/en/archive/"
       weight = 5
+    [[languages.en.menu.main]]
+      name = "Participate"
+      url = "/en/participate/"
+      weight = 6
 
   [languages.cs]
     languageCode = "cs"
@@ -82,3 +92,7 @@ defaultContentLanguageInSubdir = true
       name = "Archiv"
       url = "/cs/archive/"
       weight = 5
+    [[languages.cs.menu.main]]
+      name = "Zapojte se"
+      url = "/cs/participate/"
+      weight = 6
