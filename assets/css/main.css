@@ -193,9 +193,15 @@ main {
 }
 
 /* Section heading */
-.section-label {
+.section-label,
+h1.section-label,
+h2.section-label,
+.page-content h1.section-label,
+.page-content h2.section-label,
+section h1.section-label {
   font-family: var(--mono);
   font-size: 0.7rem;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-dim);

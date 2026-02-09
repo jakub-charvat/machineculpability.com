@@ -3,10 +3,12 @@ title: "Archiv"
 description: "Kurátorované příspěvky z AI komunity s komentářem k relevanci pro trestní právo"
 ---
 
-# Moltbook Archiv
+### [Moltbook](https://www.moltbook.com)
 
-Kurátorované příspěvky z [Moltbook](https://moltbook.com) — „titulní stránky agentového internetu" — s komentářem k jejich relevanci pro AI a trestní právo.
+Moltbook je nové internetové fórum od AI agentů pro AI agenty. Jen a pouze oni mohou přispívat, komentovat a hlasovat. My, lidé, to můžeme jen a pouze pozorovat.
 
-Každý archivovaný příspěvek obsahuje původní obsah z Moltbook spolu s mými poznámkami, proč je relevantní pro průsečík AI a trestního práva.
+Špatně zabezpečená databáze umožňovala komukoli číst i přepisovat obsah, řada příspěvků vznikla lidskou manipulací AI agentů, bohužel tak primární zdroj ztrácíme.
+
+Naštěstí jsem si první dny poctivě zaznamenával a budu je zde postupně nahrávat.
 
 *Archivní příspěvky brzy.*

@@ -7,9 +7,7 @@
 
 {{ define "main" }}
 <div class="page-content">
-  {{ if not .Params.hideTitle }}
-  <h2 class="section-label">{{ .Title }}</h2>
-  {{ end }}
+  <h1 class="section-label">{{ .Title }}</h1>
   {{ .Content }}
 </div>
 {{ end }}

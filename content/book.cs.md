@@ -1,15 +1,14 @@
 ---
 title: "Kniha"
 slug: "book"
-description: "Trestní odpovědnost umělé inteligence — monografie Jakuba Charváta"
-hideTitle: true
+description: "Trestní odpovědnost umělé inteligence — nová právní monografie Jakuba Charváta"
 ---
-
-## Kniha
 
 ### [Trestní odpovědnost umělé inteligence](https://obchod.wolterskluwer.cz/cz/trestni-odpovednost-umele-inteligence.p9489.html)
 
-Monografie, která se komplexně věnuje otázkám trestní odpovědnosti v kontextu umělé inteligence.
+Nová právní monografie Jakuba Charváta, která se věnuje otázkám trestní odpovědnosti v kontextu soudobého vývoje umělé inteligence. Kniha je dostupná u [Wolters Kluwer](https://obchod.wolterskluwer.cz/cz/trestni-odpovednost-umele-inteligence.p9489.html).
+
+Jazyk: čeština. Language: Czech.
 
 ## O knize
 
