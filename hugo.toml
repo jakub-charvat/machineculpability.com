@@ -1,7 +1,7 @@
 baseURL = "https://machineculpability.com/"
 title = "Machine Culpability"
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "cs"
 defaultContentLanguageInSubdir = true
 
 [params]
@@ -36,7 +36,7 @@ defaultContentLanguageInSubdir = true
   [languages.en]
     languageCode = "en"
     languageName = "English"
-    weight = 1
+    weight = 2
     title = "Machine Culpability"
     [languages.en.params]
       description = "Criminal liability of AI — research, analysis, and commentary"
@@ -68,7 +68,7 @@ defaultContentLanguageInSubdir = true
   [languages.cs]
     languageCode = "cs"
     languageName = "Čeština"
-    weight = 2
+    weight = 1
     title = "Machine Culpability"
     [languages.cs.params]
       description = "Blog o trestním právu a umělé inteligenci"

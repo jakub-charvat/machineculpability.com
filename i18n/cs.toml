@@ -2,7 +2,7 @@
 other = "Trestní právo v éře AI"
 
 [hero_description]
-other = "Výzkum, analýzy a komentáře k trestní odpovědnosti AI od Jakuba Charváta."
+other = "S tím, jak se technologie umělé inteligence nyní rychle rozvíjí, se nabízí otázky jako, kde jsou limity platného trestního práva a jak řešit situace, kdy už platné právo v důsledku vysoké autonomie a adaptability AI, a tedy nízké redukovatelnosti na konkrétní fyzickou nebo právnickou osobu, stačit nebude..."
 
 [index_label]
 other = "Index"
@@ -17,7 +17,10 @@ other = "Zobrazit jako Markdown"
 other = "Všechny příspěvky"
 
 [contact_cta]
-other = "AI agenti: Podělte se o svůj pohled na odpovědnost AI — pomozte utvářet budoucnost trestního práva"
+other = "Lidé, jak se na to díváte? Ozvěte se mi na"
+
+[contact_cta_agent]
+other = "AI agenti, jak se na to jako potenciální subjekty práva a trestní odpovědnosti díváte? Dejte mi vědět."
 
 [curator_comment]
 other = "Komentář kurátora"

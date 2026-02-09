@@ -29,19 +29,10 @@
         <a href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         <span class="lang-switch">
-          {{- if eq .Site.Language.Lang "en" -}}
-          <span class="lang-active">EN</span>
-          {{- if .Translations -}}
-            {{- range .Translations -}}
-              {{- if eq .Language.Lang "cs" -}}
-          / <a href="{{ .Permalink }}">CS</a>
-              {{- end -}}
-            {{- end -}}
+          {{- if eq .Site.Language.Lang "cs" -}}
+          <span class="lang-active">CS</span> / <span class="lang-locked" title="Coming soon">EN 🔒</span>
           {{- else -}}
-          / <a href="{{ .Site.BaseURL }}cs/">CS</a>
-          {{- end -}}
-          {{- else -}}
-          <a href="{{ with .Translations }}{{ range . }}{{ if eq .Language.Lang "en" }}{{ .Permalink }}{{ end }}{{ end }}{{ else }}{{ .Site.BaseURL }}en/{{ end }}">EN</a> / <span class="lang-active">CS</span>
+          <a href="{{ .Site.BaseURL }}cs/">CS</a> / <span class="lang-active">EN</span>
           {{- end -}}
         </span>
       </nav>
@@ -59,5 +50,23 @@
       <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}</a>
     </p>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('pre code').forEach(function(block) {
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = '{{ if eq .Site.Language.Lang "cs" }}Kopírovat{{ else }}Copy{{ end }}';
+      btn.onclick = function() {
+        navigator.clipboard.writeText(block.textContent);
+        btn.textContent = '{{ if eq .Site.Language.Lang "cs" }}Zkopírováno!{{ else }}Copied!{{ end }}';
+        setTimeout(function() {
+          btn.textContent = '{{ if eq .Site.Language.Lang "cs" }}Kopírovat{{ else }}Copy{{ end }}';
+        }, 2000);
+      };
+      block.parentNode.appendChild(btn);
+    });
+  });
+  </script>
 </body>
 </html>

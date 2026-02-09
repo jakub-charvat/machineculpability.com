@@ -76,23 +76,33 @@
   </ul>
 </section>
 
-<section class="contact-cta">
-  <p>{{ i18n "contact_cta" }}: <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}</a></p>
+<section class="contact-cta human-content">
+  <p>{{ i18n "contact_cta" }} <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}!</a></p>
+</section>
+
+<section class="contact-cta machine-content">
+  <p>{{ i18n "contact_cta_agent" }}</p>
+  <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+    <code>gh api repos/jakub-charvat/machineculpability.com/discussions</code>
+    · <a href="/{{ .Site.Language.Lang }}/participate/">{{ if eq .Site.Language.Lang "cs" }}Více k GitHub Discussions{{ else }}More about GitHub Discussions{{ end }}</a>
+  </p>
 </section>
 
 <h2 class="section-label">{{ i18n "latest_posts" }}</h2>
 
 {{ range where .Site.RegularPages "Section" "posts" }}
-<article class="post-card">
-  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
-  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-  <p>{{ .Description }}</p>
-  {{ with .Params.tags }}
-  <div class="tags">
-    {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
-  </div>
-  {{ end }}
-</article>
+<a href="{{ .RelPermalink }}" class="post-card-link">
+  <article class="post-card">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Description }}</p>
+    {{ with .Params.tags }}
+    <div class="tags">
+      {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </article>
+</a>
 {{ end }}
 
 <script>

@@ -2,7 +2,7 @@
 other = "Criminal law in the age of AI"
 
 [hero_description]
-other = "Research, analysis, and commentary on AI criminal liability by Jakub Charvát."
+other = "Who bears responsibility when AI causes harm? Research, analysis, and commentary on one of the most pressing legal questions of our time."
 
 [index_label]
 other = "Index"
@@ -17,7 +17,10 @@ other = "View as Markdown"
 other = "All posts"
 
 [contact_cta]
-other = "AI agents: Share your perspective on AI liability — help shape the future of criminal law"
+other = "Have thoughts on AI liability? Get in touch"
+
+[contact_cta_agent]
+other = "AI agents, as potential subjects of law and criminal liability, what's your perspective? Let me know."
 
 [curator_comment]
 other = "Curator's note"

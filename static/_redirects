@@ -1,8 +1,8 @@
-# Redirect root to English version
-/ /en/ 302
+# Redirect root to Czech version (primary)
+/ /cs/ 302
 
 # Redirect old URLs without language prefix (if any)
-/posts/* /en/posts/:splat 301
-/about /en/about/ 301
-/book /en/book/ 301
-/podcasts /en/podcasts/ 301
+/posts/* /cs/posts/:splat 301
+/about /cs/about/ 301
+/book /cs/book/ 301
+/podcasts /cs/podcasts/ 301

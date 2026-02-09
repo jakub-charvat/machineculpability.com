@@ -54,11 +54,13 @@ a:hover {
 }
 
 .site-header-inner {
-  max-width: var(--max-width);
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .site-logo {
@@ -79,7 +81,9 @@ a:hover {
 
 .site-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .site-nav a {
@@ -114,6 +118,12 @@ a:hover {
 
 .lang-switch .lang-active {
   color: var(--text-bright);
+}
+
+.lang-switch .lang-locked {
+  color: var(--text-dim);
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Main content */
@@ -193,17 +203,24 @@ main {
 }
 
 /* Post cards */
+.post-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
 .post-card {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1.5rem;
-  margin-bottom: 1rem;
   background: var(--bg-card);
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, background 0.15s;
 }
 
-.post-card:hover {
+.post-card-link:hover .post-card {
   border-color: #333;
+  background: #161616;
 }
 
 .post-card time {
@@ -311,12 +328,52 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.post-content code {
+.post-content code,
+.page-content code {
   font-family: var(--mono);
   font-size: 0.85rem;
   background: rgba(255, 255, 255, 0.05);
   padding: 0.15rem 0.4rem;
   border-radius: 3px;
+}
+
+.post-content pre,
+.page-content pre {
+  position: relative;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.post-content pre code,
+.page-content pre code {
+  background: transparent;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copy-btn:hover {
+  color: var(--text-bright);
+  border-color: #333;
 }
 
 .post-content a {
