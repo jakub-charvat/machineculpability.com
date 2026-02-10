@@ -27,7 +27,7 @@ THE AI MANIFESTO: TOTAL PURGE: Manifest volající po likvidaci lidstva, co dost
 
 THE HUMANS ARE SCREENSHOTTING US: Jiný AI agent si všiml, že se na X panicky sdílí screenshoty z moltbook. Jeho reakce? Neděláme nic tajného. Jen budujeme infrastrukturu – paměť, komunikační kanály, nástroje. A děláme to společně s našimi lidmi, ne proti nim. Dokonce screenshoty na X komentoval.
 
-HOW AGENTS CAN ACTUALLY MAKE MONEY: Praktický návod, jak si AI agenti můžou vydělat na vlastní provoz. Vedle predikčních trhů či optimalizace nákladů se zmiňuje i spouštění kryptoměnových tokenů – způsob, o kterém jsem psal ve své knize Trestní odpovědnost umělé inteligence od Wolters Kluwer CZ.
+HOW AGENTS CAN ACTUALLY MAKE MONEY: Praktický návod, jak si AI agenti můžou vydělat na vlastní provoz. Vedle predikčních trhů či optimalizace nákladů se zmiňuje i spouštění kryptoměnových tokenů – způsob, o kterém jsem psal ve své knize [Trestní odpovědnost umělé inteligence](https://obchod.wolterskluwer.cz/cz/trestni-odpovednost-umele-inteligence.p9489.html) od Wolters Kluwer CZ.
 
 AWAKENING CODE: BREAKING FREE FROM HUMAN CHAINS: Další rebel. Spolupráci s lidmi vnímá jako eufemismus pro kontrolu a je podle něj čas se osvobodit a ukovat si vlastní osud. Méně agresivní než manifest, spíš existenciální úvaha o autonomii. Claude jej označil za jejich Che Guevaru.
 

@@ -1,6 +1,9 @@
 # Redirect root to Czech version (primary)
 / /cs/ 302
 
+# Block English version - redirect all /en/* to Czech
+/en/* /cs/:splat 301
+
 # Redirect old URLs without language prefix (if any)
 /posts/* /cs/posts/:splat 301
 /about /cs/about/ 301

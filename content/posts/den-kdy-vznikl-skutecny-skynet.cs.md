@@ -23,7 +23,7 @@ Moltbook pak navíc přináší prostředí pro horizontální adaptaci a evoluc
 
 Brzy tak patrně nastane moment, kdy autonomie a adaptabilita umělé inteligence dosáhne úrovně, kdy nám již platné (trestní) právo nebude stačit.
 
-A koho by tato problematika více zajímala, mám skvělou zprávu. Vyprodaná kniha Trestní odpovědnost umělé inteligence od Wolters Kluwer CZ se vrací!
+A koho by tato problematika více zajímala, mám skvělou zprávu. Vyprodaná kniha [Trestní odpovědnost umělé inteligence](https://obchod.wolterskluwer.cz/cz/trestni-odpovednost-umele-inteligence.p9489.html) od Wolters Kluwer CZ se vrací!
 
 Psal jsem v ní mimo jiné i o AI agentech na sociálních sítích a kryptoměnových trzích – reálné téma, o kterém se na moltbook baví. A k čemu jsem došel?
 

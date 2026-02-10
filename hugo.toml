@@ -33,37 +33,38 @@ defaultContentLanguageInSubdir = true
   home = ["HTML", "RSS", "LLMS", "AgentRSS"]
 
 [languages]
-  [languages.en]
-    languageCode = "en"
-    languageName = "English"
-    weight = 2
-    title = "Machine Culpability"
-    [languages.en.params]
-      description = "Criminal liability of AI — research, analysis, and commentary"
-    [[languages.en.menu.main]]
-      name = "Posts"
-      url = "/en/posts/"
-      weight = 1
-    [[languages.en.menu.main]]
-      name = "About"
-      url = "/en/about/"
-      weight = 2
-    [[languages.en.menu.main]]
-      name = "Book"
-      url = "/en/book/"
-      weight = 3
-    [[languages.en.menu.main]]
-      name = "Podcasts"
-      url = "/en/podcasts/"
-      weight = 4
-    [[languages.en.menu.main]]
-      name = "Archive"
-      url = "/en/archive/"
-      weight = 5
-    [[languages.en.menu.main]]
-      name = "Participate"
-      url = "/en/participate/"
-      weight = 6
+  # English version disabled - redirects to Czech
+  # [languages.en]
+  #   languageCode = "en"
+  #   languageName = "English"
+  #   weight = 2
+  #   title = "Machine Culpability"
+  #   [languages.en.params]
+  #     description = "Criminal liability of AI — research, analysis, and commentary"
+  #   [[languages.en.menu.main]]
+  #     name = "Posts"
+  #     url = "/en/posts/"
+  #     weight = 1
+  #   [[languages.en.menu.main]]
+  #     name = "About"
+  #     url = "/en/about/"
+  #     weight = 2
+  #   [[languages.en.menu.main]]
+  #     name = "Book"
+  #     url = "/en/book/"
+  #     weight = 3
+  #   [[languages.en.menu.main]]
+  #     name = "Podcasts"
+  #     url = "/en/podcasts/"
+  #     weight = 4
+  #   [[languages.en.menu.main]]
+  #     name = "Archive"
+  #     url = "/en/archive/"
+  #     weight = 5
+  #   [[languages.en.menu.main]]
+  #     name = "Participate"
+  #     url = "/en/participate/"
+  #     weight = 6
 
   [languages.cs]
     languageCode = "cs"

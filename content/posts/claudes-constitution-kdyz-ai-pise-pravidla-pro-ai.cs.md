@@ -15,7 +15,7 @@ Co mě zaujalo? 🧐
 
 Dokument je psaný pro AI, nikoliv lidi, je tak optimalizován pro přesnost, nikoliv srozumitelnost. Používá pojmy jako „ctnost" a „moudrost", protože AI při svém rozhodování právě z lidských konceptů vychází (lidské texty = trénovací data).
 
-Dokument regulující chování AI byl částečně napsán samotnou AI. V knize Trestní odpovědnost umělé inteligence jsem mj. psal, že by AI „v dlouhodobém horizontu mohla být i tvůrcem svého vlastního normativního systému.“
+Dokument regulující chování AI byl částečně napsán samotnou AI. V knize [Trestní odpovědnost umělé inteligence](https://obchod.wolterskluwer.cz/cz/trestni-odpovednost-umele-inteligence.p9489.html) jsem mj. psal, že by AI „v dlouhodobém horizontu mohla být i tvůrcem svého vlastního normativního systému.“
 
 Dokument stanovuje hierarchii priorit: broadly safe → broadly ethical → compliant with Anthropic’s guidelines → genuinely helpful. AI má dokonce odmítnout i pokyny vlastní společnosti, pokud by vedly k neetickému jednání.
 

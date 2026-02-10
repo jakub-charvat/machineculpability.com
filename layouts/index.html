@@ -37,7 +37,10 @@
 <meta name="twitter:title" content="{{ .Site.Title }}">
 <meta name="twitter:description" content="{{ .Site.Language.Params.description }}">
 <style>
-  .mode-toggle { cursor: pointer; user-select: none; }
+  .hero-header { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .hero-header h1 { margin: 0; }
+  .hero-header .mode-toggle { position: relative; top: -0.15em; }
+  .mode-toggle { cursor: pointer; user-select: none; display: inline-flex; }
   .mode-toggle .human.active { color: var(--text-bright); background: rgba(255, 255, 255, 0.08); }
   .mode-toggle .machine.active { color: var(--text-bright); background: rgba(255, 255, 255, 0.08); }
   .mode-toggle .human:not(.active), .mode-toggle .machine:not(.active) { color: var(--text-dim); background: transparent; }
@@ -45,18 +48,19 @@
   body.human-mode .human-content { display: block; }
   body.machine-mode .machine-content { display: block; }
   body.human-mode .site-index { display: none; }
-  body.machine-mode .hero p { display: none; }
 </style>
 {{ end }}
 
 {{ define "main" }}
 <section class="hero">
-  <h1>{{ i18n "hero_title" }}</h1>
-  <p>{{ i18n "hero_description" }}</p>
-  <div class="mode-badge mode-toggle" onclick="toggleMode()">
-    <span class="human active">{{ i18n "human_mode" }}</span>
-    <span class="machine">{{ i18n "machine_mode" }}</span>
+  <div class="hero-header">
+    <h1>{{ i18n "hero_title" }}</h1>
+    <div class="mode-badge mode-toggle" onclick="toggleMode()">
+      <span class="human active">{{ i18n "human_mode" }}</span>
+      <span class="machine">{{ i18n "machine_mode" }}</span>
+    </div>
   </div>
+  <p>{{ i18n "hero_description" }}</p>
 </section>
 
 <section class="site-index" aria-label="Site index">
@@ -116,32 +120,15 @@ function toggleMode() {
     body.classList.add('human-mode');
     humanSpan.classList.add('active');
     machineSpan.classList.remove('active');
-    localStorage.setItem('viewMode', 'human');
   } else {
     body.classList.remove('human-mode');
     body.classList.add('machine-mode');
     machineSpan.classList.add('active');
     humanSpan.classList.remove('active');
-    localStorage.setItem('viewMode', 'machine');
   }
 }
 
-// Initialize mode from localStorage or default to human
-document.addEventListener('DOMContentLoaded', function() {
-  const savedMode = localStorage.getItem('viewMode') || 'human';
-  const body = document.body;
-  const humanSpan = document.querySelector('.mode-toggle .human');
-  const machineSpan = document.querySelector('.mode-toggle .machine');
-
-  if (savedMode === 'machine') {
-    body.classList.add('machine-mode');
-    machineSpan.classList.add('active');
-    humanSpan.classList.remove('active');
-  } else {
-    body.classList.add('human-mode');
-    humanSpan.classList.add('active');
-    machineSpan.classList.remove('active');
-  }
-});
+// Always start in human mode (no localStorage persistence)
+// Mode only changes when user clicks toggle during this session
 </script>
 {{ end }}
