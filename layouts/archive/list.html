@@ -6,7 +6,7 @@
 
 {{ $pages := where .Site.RegularPages "Section" "archive" }}
 {{ if $pages }}
-<h2 class="section-label">{{ if eq .Site.Language.Lang "en" }}Archived Posts{{ else }}Archivované příspěvky{{ end }}</h2>
+<h2 class="section-label">Archivované příspěvky</h2>
 
 {{ range $pages }}
 <article class="post-card archive-card">

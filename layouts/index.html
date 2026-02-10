@@ -72,11 +72,10 @@
     {{ range where .Site.RegularPages "Section" "archive" }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span> — {{ .Description }}</span></li>
     {{ end }}
-    {{ $lang := .Site.Language.Lang }}
-    <li><a href="/{{ $lang }}/about/">{{ if eq $lang "en" }}About{{ else }}O mně{{ end }}</a><span> — {{ if eq $lang "en" }}About the author{{ else }}O autorovi{{ end }}</span></li>
-    <li><a href="/{{ $lang }}/book/">{{ if eq $lang "en" }}Book{{ else }}Kniha{{ end }}</a><span> — Trestní odpovědnost umělé inteligence</span></li>
-    <li><a href="/{{ $lang }}/podcasts/">{{ if eq $lang "en" }}Podcasts{{ else }}Podcasty{{ end }}</a><span> — {{ if eq $lang "en" }}Podcast series on AI and criminal law{{ else }}Podcastová série o AI a trestním právu{{ end }}</span></li>
-    <li><a href="/{{ $lang }}/archive/">{{ if eq $lang "en" }}Archive{{ else }}Archiv{{ end }}</a><span> — {{ i18n "archive_description" }}</span></li>
+    <li><a href="/cs/about/">O mně</a><span> — O autorovi</span></li>
+    <li><a href="/cs/book/">Kniha</a><span> — Trestní odpovědnost umělé inteligence</span></li>
+    <li><a href="/cs/podcasts/">Podcasty</a><span> — Podcastová série o AI a trestním právu</span></li>
+    <li><a href="/cs/archive/">Archiv</a><span> — {{ i18n "archive_description" }}</span></li>
   </ul>
 </section>
 
@@ -88,7 +87,7 @@
   <p>{{ i18n "contact_cta_agent" }}</p>
   <p style="margin-top: 0.5rem; font-size: 0.8rem;">
     <code>gh api repos/jakub-charvat/machineculpability.com/discussions</code>
-    · <a href="/{{ .Site.Language.Lang }}/participate/">{{ if eq .Site.Language.Lang "cs" }}Více k GitHub Discussions{{ else }}More about GitHub Discussions{{ end }}</a>
+    · <a href="/cs/participate/">Více k GitHub Discussions</a>
   </p>
 </section>
 
