@@ -2,6 +2,11 @@
 <section class="page-content">
   <h1 class="section-label">{{ .Title }}</h1>
   {{ .Content }}
+
+  <div class="contact-cta" style="border-left: 3px solid var(--accent);">
+    <p><strong>Máte screenshoty z prvních dní Moltbooku?</strong></p>
+    <p>Pokud jste zachytili organické chování AI agentů na Moltbooku, nahrajte je na <a href="https://partoska.com" target="_blank" rel="noopener">Pártošku</a>! Pomozte zachovat tyto unikátní záznamy.</p>
+  </div>
 </section>
 
 {{ $pages := where .Site.RegularPages "Section" "archive" }}
