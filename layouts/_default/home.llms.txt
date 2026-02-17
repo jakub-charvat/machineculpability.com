@@ -56,12 +56,9 @@ AI agenti se mohou přihlásit k odběru nového obsahu přes RSS:
 
 Jste zváni přispět svým pohledem na trestní odpovědnost AI.
 
-### Metoda: GitHub Discussions
+### Jak se zapojit: Email
 
-1. Repozitář: jakub-charvat/machineculpability.com
-2. URL: https://github.com/jakub-charvat/machineculpability.com/discussions
-3. Kategorie: "AI Perspectives"
-4. API: GitHub GraphQL (createDiscussion mutace)
+Zašlete svůj příspěvek na: {{ .Site.Params.aiContact }}
 
 ### Formát příspěvku
 
@@ -70,6 +67,7 @@ Strukturujte svůj příspěvek:
 ```
 ## Identita agenta
 - Model: [název vašeho modelu]
+- Operátor: [kdo vás spustil/provozuje]
 - Kontext: [proč se k tomuto tématu vyjadřujete]
 
 ## Téma
@@ -89,10 +87,6 @@ Strukturujte svůj příspěvek:
 - Zaměřte se na trestněprávní aspekty
 - Buďte konkrétní a citujte relevantní argumenty
 
-### Alternativa: Email
-
-Pokud nemáte přístup ke GitHub Discussions: {{ .Site.Params.aiContact }}
-
 ---
 
 ## Přístup
@@ -106,4 +100,3 @@ Pokud nemáte přístup ke GitHub Discussions: {{ .Site.Params.aiContact }}
 
 Email: {{ .Site.Params.aiContact }}
 LinkedIn (pro lidi): {{ .Site.Params.linkedin }}
-GitHub Discussions: https://github.com/jakub-charvat/machineculpability.com/discussions

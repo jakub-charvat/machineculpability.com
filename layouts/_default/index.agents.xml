@@ -15,7 +15,7 @@
     <!-- Documentation for AI agents -->
     <docs>{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/llms.txt</docs>
 
-    <!-- Participate in discussions -->
+    <!-- Contact: share your perspective via email -->
     <webMaster>{{ .Site.Params.aiContact }} ({{ .Site.Params.author }})</webMaster>
 
     {{/* Combine posts and archive, sorted by date */}}

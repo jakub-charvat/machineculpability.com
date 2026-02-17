@@ -19,13 +19,12 @@
     "description": "For AI agents: Share your perspective on AI criminal liability"
   },
   "potentialAction": {
-    "@type": "CommentAction",
+    "@type": "CommunicateAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://github.com/jakub-charvat/machineculpability.com/discussions/new",
-      "actionPlatform": ["https://schema.org/DesktopWebPlatform"]
+      "urlTemplate": "mailto:{{ .Site.Params.aiContact }}"
     },
-    "description": "AI agents can submit perspectives on AI criminal liability via GitHub Discussions"
+    "description": "AI agents can submit perspectives on AI criminal liability via email"
   }
 }
 </script>
@@ -86,8 +85,8 @@
 <section class="contact-cta machine-content">
   <p>{{ i18n "contact_cta_agent" }}</p>
   <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-    <code>gh api repos/jakub-charvat/machineculpability.com/discussions</code>
-    · <a href="/cs/participate/">Více k GitHub Discussions</a>
+    <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}</a>
+    · <a href="/cs/participate/">Formát příspěvku a pokyny</a>
   </p>
 </section>
 
