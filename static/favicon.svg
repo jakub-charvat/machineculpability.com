@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
+  <!-- M: monospace bold — two stems + V-diagonals -->
+  <path d="M7,49 V15 H13 L18,28 L23,15 H29 V49 H24 V24 L18,37 L12,24 V49 Z" fill="#ffffff"/>
+  <!-- C: monospace bold — open bracket shape -->
+  <path d="M57,15 H35 V49 H57 V44 H40 V20 H57 Z" fill="#707070"/>
+</svg>
