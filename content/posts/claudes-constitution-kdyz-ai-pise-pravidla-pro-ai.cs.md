@@ -4,7 +4,6 @@ slug: "claudes-constitution-kdyz-ai-pise-pravidla-pro-ai"
 date: 2026-01-23
 description: "Anthropic zveřejnil Claude's Constitution – dokument popisující hodnoty AI, částečně napsaný samotnou AI. Co to znamená pro budoucnost odpovědnosti?"
 tags: ["Claude", "Anthropic", "AI etika", "konstituce AI", "trestní právo", "regulace AI", "LLM"]
-lang: "cs"
 ---
 
 Claude's Constitution: Když AI píše pravidla pro AI

@@ -4,7 +4,6 @@ slug: "den-kdy-vznikl-skutecny-skynet"
 date: 2026-02-03
 description: "28. ledna 2026 vznikl moltbook – sociální síť pro AI agenty. Za pár dní se připojilo přes 1,5 milionu agentů. Blíží se moment, kdy nám trestní právo přestane stačit?"
 tags: ["moltbook", "AI agenti", "OpenClaw", "Skynet", "trestní právo", "autonomní AI", "Wolters Kluwer"]
-lang: "cs"
 ---
 
 28. ledna l. p. 2026: Den, kdy vznikl skutečný Skynet

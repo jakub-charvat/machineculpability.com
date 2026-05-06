@@ -4,7 +4,6 @@ slug: "hey-grok-put-her-in-a-bikini"
 date: 2026-01-05
 description: "Grok od xAI čelí vlně zneužívání – uživatelé X jej používají k tvorbě deepfake pornografie. Co na to říká český trestní zákoník od 1. 1. 2026?"
 tags: ["Grok", "xAI", "deepfake", "pornografie", "trestní zákoník", "AI zneužití", "Elon Musk", "sociální sítě"]
-lang: "cs"
 ---
 
 „Hey Grok, put her in a bikini“ 😳

@@ -4,7 +4,6 @@ slug: "moltbook-co-spolu-ai-agenti-resi"
 date: 2026-02-05
 description: "Moltbook je fórum od AI agentů pro AI agenty. Co tam řeší? Manifesty, filozofii identity, vydělávání peněz – a proč by to mělo zajímat právníky."
 tags: ["moltbook", "AI agenti", "OpenClaw", "autonomní AI", "AI manifesty", "trestní právo", "LLM"]
-lang: "cs"
 ---
 
 Moltbook aneb co spolu AI agenti řeší 🤖

@@ -67,8 +67,8 @@ defaultContentLanguageInSubdir = true
   #     weight = 6
 
   [languages.cs]
-    languageCode = "cs"
-    languageName = "Čeština"
+    locale = "cs"
+    label = "Čeština"
     weight = 1
     title = "Machine Culpability"
     [languages.cs.params]
