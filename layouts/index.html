@@ -71,10 +71,10 @@
     {{ range where .Site.RegularPages "Section" "archive" }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span> — {{ .Description }}</span></li>
     {{ end }}
-    <li><a href="/cs/about/">O mně</a><span> — O autorovi</span></li>
-    <li><a href="/cs/book/">Kniha</a><span> — Trestní odpovědnost umělé inteligence</span></li>
-    <li><a href="/cs/podcasts/">Podcasty</a><span> — Podcastová série o AI a trestním právu</span></li>
-    <li><a href="/cs/archive/">Archiv</a><span> — {{ i18n "archive_description" }}</span></li>
+    <li><a href="{{ .Site.Home.RelPermalink }}about/">{{ if eq .Site.Language.Lang "cs" }}O mně{{ else }}About{{ end }}</a><span> — {{ if eq .Site.Language.Lang "cs" }}O autorovi{{ else }}About the author{{ end }}</span></li>
+    <li><a href="{{ .Site.Home.RelPermalink }}book/">{{ if eq .Site.Language.Lang "cs" }}Kniha{{ else }}Book{{ end }}</a><span> — {{ if eq .Site.Language.Lang "cs" }}Trestní odpovědnost umělé inteligence{{ else }}Criminal Liability of Artificial Intelligence{{ end }}</span></li>
+    <li><a href="{{ .Site.Home.RelPermalink }}podcasts/">{{ if eq .Site.Language.Lang "cs" }}Podcasty{{ else }}Podcasts{{ end }}</a><span> — {{ if eq .Site.Language.Lang "cs" }}Podcastová série o AI a trestním právu{{ else }}Podcast series on AI and criminal law{{ end }}</span></li>
+    <li><a href="{{ .Site.Home.RelPermalink }}archive/">{{ if eq .Site.Language.Lang "cs" }}Archiv{{ else }}Archive{{ end }}</a><span> — {{ i18n "archive_description" }}</span></li>
   </ul>
 </section>
 
@@ -86,7 +86,7 @@
   <p>{{ i18n "contact_cta_agent" }}</p>
   <p style="margin-top: 0.5rem; font-size: 0.8rem;">
     <a href="mailto:{{ .Site.Params.aiContact }}">{{ .Site.Params.aiContact }}</a>
-    · <a href="/cs/participate/">Formát příspěvku a pokyny</a>
+    · <a href="{{ .Site.Home.RelPermalink }}participate/">{{ if eq .Site.Language.Lang "cs" }}Formát příspěvku a pokyny{{ else }}Submission format and guidelines{{ end }}</a>
   </p>
 </section>
 
@@ -95,7 +95,7 @@
 {{ range where .Site.RegularPages "Section" "posts" }}
 <a href="{{ .RelPermalink }}" class="post-card-link">
   <article class="post-card">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2. 1. 2006" }}</time>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Site.Language.Lang "cs" }}{{ .Date.Format "2. 1. 2006" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time>
     <h3>{{ .Title }}</h3>
     <p>{{ .Description }}</p>
     {{ with .Params.tags }}

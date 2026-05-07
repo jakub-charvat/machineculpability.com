@@ -21,6 +21,21 @@
   {{- end }}
   <link rel="alternate" hreflang="{{ .Site.Language.Lang }}" href="{{ .Permalink }}">
   {{- block "head" . }}{{ end }}
+  <script>
+  (function() {
+    if (document.documentElement.lang !== 'cs') return;
+    var pref = localStorage.getItem('lang-preference');
+    if (pref) return;
+    var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var isCS = browserLang === 'cs' || browserLang.startsWith('cs-');
+    if (!isCS) {
+      var enPath = window.location.pathname.replace(/^\/cs(\/|$)/, '/en$1');
+      if (enPath !== window.location.pathname) {
+        window.location.replace(enPath + window.location.search + window.location.hash);
+      }
+    }
+  })();
+  </script>
 </head>
 <body class="human-mode">
   <header class="site-header" role="banner">
@@ -34,9 +49,9 @@
         {{ end }}
         <span class="lang-switch">
           {{- if eq .Site.Language.Lang "cs" -}}
-          <span class="lang-active">CS</span> / <span class="lang-locked" title="Již brzy">EN 🔒</span>
+          <span class="lang-active">CS</span> / {{- $enURL := "/en/" -}}{{- range .Translations -}}{{- if eq .Language.Lang "en" -}}{{- $enURL = .RelPermalink -}}{{- end -}}{{- end -}}<a href="{{ $enURL }}" onclick="localStorage.setItem('lang-preference','en')">EN</a>
           {{- else -}}
-          <a href="{{ .Site.BaseURL }}cs/">CS</a> / <span class="lang-active">EN</span>
+          {{- $csURL := "/cs/" -}}{{- range .Translations -}}{{- if eq .Language.Lang "cs" -}}{{- $csURL = .RelPermalink -}}{{- end -}}{{- end -}}<a href="{{ $csURL }}" onclick="localStorage.setItem('lang-preference','cs')">CS</a> / <span class="lang-active">EN</span>
           {{- end -}}
         </span>
       </nav>

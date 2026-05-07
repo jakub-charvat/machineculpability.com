@@ -4,6 +4,7 @@ slug: "automaton-suverenni-ai-agent"
 date: 2026-02-20
 description: "Automaton je AI agent, který si musí vydělat na vlastní existenci. Vytvoří si kryptopeněženku, platí za výpočetní výkon, a když je úspěšný, replikuje se. Je čas otevřít téma odpovědnosti AI agentů i mimo akademii."
 tags: ["automaton", "ai-agenti", "kryptoměny", "přirozený-výběr", "replikace", "autonomie", "based-agents", "openclaw", "moltbook"]
+translationKey: "automaton-suverenni-ai-agent"
 ---
 
 Automaton: Jen další AI agent, který si na sebe musí vydělat? Tak úplně ne.
